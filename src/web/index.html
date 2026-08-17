@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Battle</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <section id="menu">
+    <div class="menu-card">
+      <h1>Battle</h1>
+      <label for="player-name">Name</label>
+      <input id="player-name" type="text" placeholder="Player" maxlength="24" />
+      <div class="menu-actions">
+        <button id="host-btn">Host Game</button>
+        <button id="join-btn">Join Game</button>
+      </div>
+      <div id="menu-error"></div>
+    </div>
+  </section>
+
+  <section id="lobby" class="hidden">
+    <div class="menu-card">
+      <h1>Lobby</h1>
+      <ul id="player-list"></ul>
+      <div id="lobby-status"></div>
+      <div class="menu-actions">
+        <button id="start-btn" class="hidden">Start Game</button>
+        <button id="leave-btn">Leave</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="game" class="hidden">
+    <canvas id="viewport"></canvas>
+    <div id="hud">
+      <div id="status">connecting...</div>
+      <div id="role"></div>
+      <div id="requisition">Requisition: 0</div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
